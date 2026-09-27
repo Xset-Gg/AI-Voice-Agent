@@ -1,0 +1,15 @@
+# Self-hosted LiveKit server (only used with `docker compose --profile livekit up`).
+# Most deployments should use LiveKit Cloud instead and skip this file.
+port: 7880
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 60000
+  use_external_ip: true
+redis:
+  address: localhost:6379
+keys:
+  # Must match LIVEKIT_API_KEY / LIVEKIT_API_SECRET in .env (secret: 32+ chars).
+  devkey: replace-with-a-long-random-secret-at-least-32-chars
+logging:
+  level: info

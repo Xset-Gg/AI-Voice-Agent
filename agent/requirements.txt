@@ -1,0 +1,3 @@
+livekit-agents[openai,deepgram,silero,cartesia,google,turn-detector]>=1.8,<2
+httpx>=0.27
+python-dotenv>=1.0
